@@ -23,3 +23,14 @@ double Rental::getCharge()
 	}
 	return result;
 }
+int Rental::getBonusPoints() {
+
+	int frequentRenterPoints = 0;
+	frequentRenterPoints++;
+
+	// Бонус за двухдневный прокат новинки
+	if ((getMovie().getPriceCode() == Movie::NEW_RELEASE) &&
+		getDaysRented() > 1)
+		frequentRenterPoints++;
+	return frequentRenterPoints;
+}

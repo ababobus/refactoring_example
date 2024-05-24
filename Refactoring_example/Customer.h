@@ -21,5 +21,8 @@ public:
 		return _name;
 	}
 	string statement();
+	int getBonus(Rental& each);
+	double getTotalAmount();
+	int getTotalBonus();
 };
 
